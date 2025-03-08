@@ -1,0 +1,131 @@
+{
+  "name": "cc_debuger_realtime",
+  "version": "1.0.0",
+  "package_version": 2,
+  "description": "Cocos real-time multi-function debugger",
+  "author": "hyz",
+  "author-info": {
+    "email": "1451784145@qq.com",
+    "WeChat": "busky192",
+    "QQ": "im_chenpipi"
+  },
+  "type": "module",
+  "main": "./dist/browser.cjs",
+  "dependencies": {
+    "@dagrejs/dagre": "^1.1.4",
+    "@vue-flow/core": "^1.41.7",
+    "element-plus": "^2.8.6",
+    "fs-extra": "^11.2.0",
+    "mitt": "^3.0.1",
+    "pngjs": "^7.0.0",
+    "vue": "^3.4.37",
+    "ws": "^8.18.0"
+  },
+  "contributions": {
+    "builder": "./builder/builder.js",
+    "menu": [
+      {
+        "path": "i18n:menu.extension",
+        "label": "i18n:cc_debuger_realtime.menu_main",
+        "message": "open_main"
+      }
+    ],
+    "messages": {
+      "open_main": {
+        "methods": [
+          "open_main"
+        ]
+      },
+      "restart-self": {
+        "methods": [
+          "restart_self_ui"
+        ]
+      },
+      "doEvalJs": {
+        "methods": [
+          "default.doEvalJs"
+        ]
+      },
+      "sendRuntimeLog": {
+        "methods": [
+          "log_panel.sendRuntimeLog"
+        ]
+      },
+      "callMainPanelFunc": {
+        "methods": [
+          "default.callMainPanelFunc"
+        ]
+      },
+      "onRuntimeOnlineState": {
+        "methods": [
+          "log_panel.onRuntimeOnlineState",
+          "eval_panel.onRuntimeOnlineState",
+          "localCache_panel.onRuntimeOnlineState",
+          "dynamicTexture_panel.onRuntimeOnlineState"
+        ]
+      },
+      "onBeforeBuild": {
+        "methods": [
+          "onBeforeBuild"
+        ]
+      },
+      "onAfterBuild": {
+        "methods": [
+          "onAfterBuild"
+        ]
+      },
+      "setDefaultEvalStr": {
+        "methods": [
+          "eval_panel.setDefaultEvalStr"
+        ]
+      }
+    }
+  },
+  "panels": {
+    "default": {
+      "main": "./dist/main_panel.cjs",
+      "size": {
+        "min-width": 600,
+        "min-height": 600,
+        "width": 1000,
+        "height": 850
+      }
+    },
+    "eval_panel": {
+      "main": "./dist/eval_panel.cjs",
+      "size": {
+        "min-width": 800,
+        "min-height": 600,
+        "width": 1200,
+        "height": 600
+      }
+    },
+    "log_panel": {
+      "main": "./dist/log_panel.cjs",
+      "size": {
+        "min-width": 400,
+        "min-height": 300,
+        "width": 800,
+        "height": 600
+      }
+    },
+    "dynamicTexture_panel": {
+      "main": "./dist/dynamicTexture_panel.cjs",
+      "size": {
+        "min-width": 800,
+        "min-height": 800,
+        "width": 800,
+        "height": 800
+      }
+    },
+    "localCache_panel": {
+      "main": "./dist/localCache_panel.cjs",
+      "size": {
+        "min-width": 400,
+        "min-height": 500,
+        "width": 660,
+        "height": 800
+      }
+    }
+  }
+}
