@@ -7,3 +7,5 @@
 2.执行npm install 
 
 3.到cocos creator编辑器的扩展管理中，启用该插件
+
+4.确保项目设置的功能裁剪中，勾选了Websocket
