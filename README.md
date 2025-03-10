@@ -1,11 +1,52 @@
-# cc_debuger_realtime_publish
+# CC Debugger Realtime Publish
 
-### 注意事项
+## 项目设置
 
-1.下载插件之后，放在cocos creator 根目录下的extensions文件夹下，并命名为cc_debuger_realtime
+1. **插件依赖 Websocket**：确保在项目设置的功能裁剪中，勾选了 Websocket。否则，构建后的程序将无法连接插件。
 
-2.执行npm install 
+## 安装注意事项
 
-3.到cocos creator编辑器的扩展管理中，启用该插件
+1. **下载插件**：
+    - 将插件下载后，放置在 Cocos Creator 根目录下的 `extensions` 文件夹中，并命名为 `cc_debuger_realtime`。
 
-4.确保项目设置的功能裁剪中，勾选了Websocket
+2. **安装依赖**：
+   - 执行 `npm install` 安装所需的依赖。
+
+3. **启用插件**：
+   - 打开 Cocos Creator 编辑器，进入扩展管理，启用该插件。
+
+## 启动注意事项
+
+1. **插件依赖**：
+   - 插件依赖于插件服务器，Windows 下为 `server/server.exe`，macOS 下为 `server/server`。
+   - 在 Windows 下，服务器会自动随插件主面板启动和关闭，无需额外处理。
+   - 在 macOS 下，由于苹果系统的安全策略，需要进行额外的处理。
+
+### macOS 下的解决方案
+
+#### 临时解决方案（立即生效）
+
+1. 打开终端，`cd` 到 `cc_debugger_realtime/server` 目录。
+2. 执行以下命令赋予执行权限：
+   ```bash
+   chmod a+x server
+3. 按住键盘上的 Control 键，同时单击 server，从弹出的菜单中选择“打开”。此方法可以临时将不受信任的程序加入白名单，后续可以直接双击运行。 或者指定端口运行：
+    ```bash
+   ./server -port 8888
+
+#### 永久解决方案（修改系统设置）
+##### 方法1：启用“任何来源”选项
+1. 打开系统偏好设置：
+2. 点击左上角苹果图标 → 选择“系统设置” → 进入“安全性与隐私” → 选择“通用”选项卡。
+
+3. 解锁权限并开启“任何来源”：
+
+4. 点击左下角锁形图标 → 输入管理员密码解锁。
+
+5. 勾选“任何来源”选项（若未显示，需通过终端命令开启）。
+
+##### 方法2：通过终端命令开启“任何来源”
+1. 打开终端，输入以下命令并回车：
+   ```bash
+   sudo spctl --master-disable
+2. 输入管理员密码后按回车。
