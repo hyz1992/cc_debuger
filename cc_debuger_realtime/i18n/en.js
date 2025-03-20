@@ -120,7 +120,7 @@ module.exports = {
     text_117: 'Your trial ended on {0}',
     text_118: 'Your account has been activated',
     text_119: 'Your plugin is already the latest version: {0}',
-    text_120: 'The current plugin is not the latest version, the latest version is: {0}',
+    text_120: 'Your plugin ({0}) is an old version. Latest version: {1}',
     text_121: 'Update address:',
     text_122: '',
     text_123: '',
