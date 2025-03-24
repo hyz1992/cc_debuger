@@ -31,7 +31,16 @@ require("./wasm_exec.cjs");
 async function loadWasmOfGo(wasmPath) {
   const go = new Go();
   go.argv = [wasmPath];
-  go.env = Object.assign({ TMPDIR: require("os").tmpdir() }, process.env);
+  let env = Object.assign({ TMPDIR: require("os").tmpdir() }, process.env);
+
+  for(let k in env){
+    if(k.toLowerCase()=="path"){
+      delete env[k]
+      break
+    }
+  }
+  go.env = env
+
   go.exit = process.exit;
 
   const wasmData = fs.readFileSync(path.join(__dirname, wasmPath));
