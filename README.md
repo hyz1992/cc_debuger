@@ -37,7 +37,7 @@
    - 打开 Cocos Creator 编辑器，进入扩展管理，启用该插件，点击刷新。
    - 插件已启用后，在编辑器菜单页找到 “扩展-节点&资源-实时调试”，点击即可打开插件主界面
 
-   ![打开主界面](.\images\0_打开主界面.gif)
+   ![打开主界面](.\images\0_open_main_ui.gif)
 
 
 ## 文件夹结构
@@ -74,21 +74,21 @@ cc_debuger_realtime/
 ## 效果截图
 
 ### 1. 实时查看节点树
-![实时查看节点树](.\images\1_节点树资源树.gif)
+![实时查看节点树](.\images\1_node_tree_res_tree.gif)
 
 ### 2. 实时修改节点信息
 支持修改节点坐标、缩放等，也支持修改任意组件的任意信息，如color、string、label
 
-![实时修改节点信息](.\images\2_修改节点信息.gif)
+![实时修改节点信息](.\images\2_modify_node_info.gif)
 
 ### 3. 查看节点依赖的资源列表
-![查看节点依赖的资源列表](.\images\3_查看节点依赖的资源列表.gif)
+![查看节点依赖的资源列表](.\images\3_deps_of_node.gif)
 
 ### 4. 动态图集
-![动态图集](.\images\4_动态图集.gif) 
+![动态图集](.\images\4_dynamic_atlas.gif) 
 
 ### 5. 查看引用资源的节点
-![查看引用资源的节点](.\images\5_查看引用资源的节点.gif) 
+![查看引用资源的节点](.\images\5_nodes_ref_the_res.gif) 
 
 ### 6. 执行js脚本
 可以修改运行时内存的信息：
@@ -102,19 +102,19 @@ const scene = cc.director.getScene();
 return scene.name
 ```
 
-![执行js脚本](.\images\6_执行js脚本.gif)
+![执行js脚本](.\images\6_eval_js.gif)
 
 ### 7. 拦截日志
 注意，已构建发布的release运行时，cc.log、cc.warn无法拦截，只能拦截cc.error和console日志
 
-![拦截日志](.\images\7_拦截日志.gif)
+![拦截日志](.\images\7_intercept_log.gif)
 
 ### 8. 切换spine动画
 除了spine，还支持预览切换dragon、cc.Animation动画
 
-![切换spine动画](.\images\8_切换spine动画.gif)
+![切换spine动画](.\images\8_switch_spine_anim.gif)
 
 ### 9. 查看可写路径
 所有的native运行时都支持查看可写路径（native.fileUtils.getWritablePath()），并下载手机可写路径内的文件到本地，此处以windows为例。
 
-![查看可写路径](.\images\9_查看可写路径.gif)
+![查看可写路径](.\images\9_writablePath.gif)
