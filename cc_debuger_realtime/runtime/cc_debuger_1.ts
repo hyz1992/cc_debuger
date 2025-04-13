@@ -1,7 +1,7 @@
 
 // @ts-ignore
 import { DEBUG, DEV, EDITOR, JSB, PREVIEW, SUPPORT_JIT } from 'cc/env';
-// @ts-ignore
+
 import * as cc from "cc"
 
 window["__cchyz"] = cc
@@ -30,7 +30,7 @@ setTimeout(() => {
             CC_JSB: JSB,
             CC_SUPPORT_JIT: SUPPORT_JIT,
             CC_EDITOR:EDITOR
-        } as any 
+        } as GameEnvParam 
         if(cc.sys.isNative){
             obj.writablePath = cc.native.fileUtils.getWritablePath()
         }
