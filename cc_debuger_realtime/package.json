@@ -1,6 +1,6 @@
 {
   "name": "cc_debuger_realtime",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "package_version": 2,
   "description": "Cocos real-time multi-function debugger",
   "author": "hyz",
@@ -39,11 +39,6 @@
       "restart-self": {
         "methods": [
           "restart_self_ui"
-        ]
-      },
-      "doEvalJs": {
-        "methods": [
-          "default.doEvalJs"
         ]
       },
       "sendRuntimeLog": {
