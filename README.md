@@ -81,8 +81,17 @@ cc_debuger_realtime/
    - 插件主界面打开的时候，会自动运行此服务器，一般情况下，地址是ws://localhost:8085
    - 您也可以手动运行服务器，只需要使用nodejs执行如下命令 
       ```shell
-      npm install ws 
+      
       node server.js 8888
+      ```
+   - 注意，当手动复制server文件夹到别处时，需要先cd到server目录并执行npm install ws ， 执行之后，会在当前文件夹生成package.json，package.json中要加上"type":"module"，不然会报错：SyntaxError: Cannot use import statement outside a module
+      ```js
+      {
+        "dependencies": {
+            "ws": "^8.18.1"
+         },
+        "type":"module"
+      }
       ```
    这就会在本地的8888端口开启一个中转服务器，当您把它部署到远程，即是远程服务器，您可以在插件主界面上切换到此服务器。
 - **package.json** 插件的清单配置和nodejs依赖等
