@@ -1,6 +1,6 @@
 {
   "name": "cc_debuger_realtime",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "package_version": 2,
   "description": "Cocos real-time multi-function debugger",
   "author": "hyz",

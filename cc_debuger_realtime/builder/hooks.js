@@ -48,7 +48,7 @@ const onAfterCompressSettings = function (options, result) {
 exports.onAfterCompressSettings = onAfterCompressSettings;
 const onAfterBuild = function (options, result) {
     return __awaiter(this, void 0, void 0, function* () {
-        Editor.Message.request("cc_debuger_realtime", "onAfterBuild", options, result.dest, result.paths);
+        Editor.Message.request("cc_debuger_realtime", "onAfterBuild", true, options, result.dest, result.paths);
     });
 };
 exports.onAfterBuild = onAfterBuild;
@@ -61,7 +61,8 @@ exports.unload = unload;
 const onError = function (options, result) {
     return __awaiter(this, void 0, void 0, function* () {
         // Todo some thing
-        console.warn(`${PACKAGE_NAME} run onError`);
+        //console.warn(`${PACKAGE_NAME} run onError 2`);
+        Editor.Message.request("cc_debuger_realtime", "onAfterBuild", false, options, result.dest, result.paths);
     });
 };
 exports.onError = onError;
